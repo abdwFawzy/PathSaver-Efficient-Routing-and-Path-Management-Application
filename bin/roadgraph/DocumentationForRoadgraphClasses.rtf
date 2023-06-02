@@ -1,0 +1,24 @@
+Class: MapGraph
+
+Modifications made to MapGraph (what and why):
+I added member variables to hold the number of vertices and edges, as well as a HashMap to map geographic points to a list of custom-made Road objects. Additionally, I implemented getters for the member variables and a function to retrieve the neighbors of any geographic point.
+
+Class name: Road
+
+Purpose and description of class: Road represents a road or path between two nodes in the graph. It stores information about the start and end nodes of the road, as well as the length of the road. Road provides methods for getting and setting the start and end nodes, as well as the length of the road.
+
+Class name: MapGraphTest
+
+Purpose and description of class: MapGraphTest is a JUnit test class that tests the functionality of the MapGraph class. It contains test cases for adding and removing nodes and edges from the graph, calculating distances between nodes, and retrieving neighbors of a given node.
+
+Class name: MapGraphBFSTest
+
+Purpose and description of class: MapGraphBFSTest is a JUnit test class that tests the breadth-first search algorithm implemented in the MapGraph class. It contains test cases for finding the shortest path between two nodes in the graph using BFS, and verifying that the path returned is indeed the shortest path.
+
+ justifications for the design choices made in the MapGraph class:
+
+    Use of HashMap: The choice of using a HashMap to store the geographic points and their corresponding edges was made to improve the performance of the class. The use of HashMap provides constant time access to edges at each point, allowing for faster processing of edge operations such as adding, removing, and checking the existence of edges.
+
+    Custom Road class: The custom Road class was designed to encapsulate information about each road in the graph. By storing the geographic point each road points to and the distance between the two points, the Road class allows for easy calculation of distances between points and efficient storage of road data in the HashMap.
+
+    Flexibility of the class: The MapGraph class is designed to be flexible, allowing for easy addition or removal of nodes and edges as well as the calculation of distances between nodes. This makes it a versatile class that can be used in a wide range of applications such as routing, logistics, and navigation.
